@@ -9,14 +9,12 @@ Adaptive grid bootstrap js events
 </head>
 ```
 
-```html
-<script>
-    var class_instance = new Example();
-</script>
-```
+AdaptiveGrid.js - Базовый объект, который отслеживает ширину экрана и вызывает определенные события.
+
+Example.js - Объект, который наследуется от AdaptiveGrid. Имеет в своей коллекции набор кастомных методов.
 
 ```js
-function AdaptivePageTop() {
+function Example() {
     this.__proto__ = AdaptiveGrid;
 
     var t = this;
@@ -72,4 +70,11 @@ function AdaptivePageTop() {
 
     this.init();
 }
+```
+
+Инициализация класса.
+```html
+<script>
+    var class_instance = new Example();
+</script>
 ```
